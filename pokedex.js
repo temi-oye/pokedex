@@ -63,7 +63,8 @@ async function updatePokemonInfo(pokemonDexNumber) {
       newInfo.push(latestGenera);
 
     })
-    .catch(error => updatePokemonInfo(1));
+    // .catch(error => updatePokemonInfo(1));
+    .catch(error => missingNo());
 
   await fetch('https://pokeapi.co/api/v2/pokemon/' + pokemonDexNumber)
     .then(response => response.json())
@@ -122,7 +123,8 @@ function getColor(type) {
     "electric": "#fcf6bd",
     "dark": "#4a4e69",
     "ice": "#bde0fe",
-    "ghost": "#9a8c98"
+    "ghost": "#9a8c98",
+    "???": "#edede9"
 
   }
   color = colorMap[type];
@@ -142,6 +144,18 @@ function changeChildBg(parent) {
       changeBackground(newColor, child);
     }
   }
+}
+
+// easter egg
+function missingNo(){
+  changeImg("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMkAAADhCAMAAABV52FsAAAADFBMVEX///91ZY7uqH4SCwuO57XwAAADnUlEQVR4nO2c0ZLaMAxFbfb//7lkEEiKZAMtWHfde16cxEnmnp0VckK3rZEJP1d0r9+QzdORsIcFTdDpih4xE/4gMjTBYy+TNi/sX1L0NMFkVCdmjiaLoQkC3RHm4gALTbC4XAkHvVccIIVosjrnc/YxOZ5+rzLpYBLPPhRAoAkeR7DLAF8ZNFkFTfBI+4mQmizM9h40wUNax+XWRfxgTpNqSudAoElZ4CH7mLxXxx34IZgmX4z0lxx1ojZ+aG3w5q4o6xya4LGPySy0tA4PdD/RTT/QpJRYJ34d70sJtVQOaILHJiahsGWZf8xJ8DBfnTmHJlj0Pnhzp63DL2jkotLQKTQpDZ2yj4lU9rN+0sAbSaMJIqE4fvyeLxc9pTp3hCbVuSP7mBzBdG/YM9LPACxogocsRY7N0Dpid6nL+Rya4LGPSVzAazOJZyM70WR90hfx+dK0fn5luLegCR4bmBzF7etY98KLR/O5UJ07QpPq3M8QG+/VWlJHVQlfhSZ4oJv0CX4+Zg8HaxQEmuCZpJiYflWv+NPMgCVEE5p8hHSdJIniikrfYpvEIIVPEzyTFImZLtllkyaLoYkZQJByN3tpvrSfLIz5AjQpNfHvT1J8aAGvTmhCk++RrrsO+mNVb3qKthUxic5l0ATPxKRV4neJs1oYlVIBNAlzNPkIseJ9mmApyJmx4kefIF+HJnImmIm+MbkXiT4X9ts/rVe9WAuzGloITQw0WYEomO7iLS/u77T8dVWZc2hS3uPDL7okis3CZ8eqDJr4CyqSn9nHpGdMJyZzx1C27qIJnsnwzV17/HVTahLv1B9fTK7Mr9Ak3okmnySs6s2gpMsvT3yUpsl/bSIrdNMQ/NDPz4ztNiHB/dB7cT9JFRpNaPKvzEyMgpa0bImQH8o7I02wTNJEZmjJg+K9eFLSlcwqaEKT9ZhlVOgnQ0orfgRNKrK+SyiZ4YAOTfDYwCQUthw0wy+BJguZtYYYenSdfzaogSY0qcGbyKYM+jh8Z+SMAE0qM+cYk5ZVhr6yG67/QaBJVd4xv9nEp/UHZ2fGi6qhCYJJjNHPfSGdG37dWPb9CU1o8j3SkjVD8PIXpbco0Mhi0KTcJMWbpHvmzPATAIImNPkIPSOd8NfFp99L8f9XTxN0E3MkPbOdayi92YLYCTShyffoAZ0Ynu22zFK/TqPRBNHEE2ROhq/Jrsk6hyb+FmuyEkIIIYQQQgghhBBCCCFQ/AEm2THYLKtPiwAAAABJRU5ErkJggg==");
+  let newInfo = [];
+  newInfo.unshift(`NO ${0}:\t` + "missingno");
+  newInfo.push("The glitch pokemon",`HT: ???`, `WT: ???`);
+  addArrToDoc(newInfo, infoDiv)
+  addToDoc("???", typesDiv);
+  addToDoc("The only pokemon that can defeat ultra instinct Shaggy", descriptionDiv);
+  changeChildBg(typesDiv);
 }
 
 randomPokemon();
