@@ -1,0 +1,231 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  background-color: #eee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  width: 100%;
+  font-family: Roboto, sans-serif;
+  color: #22223b;
+}
+
+h1 {
+  text-align: center;
+  color: #fcbf49;
+  font-size: 42px;
+  font-weight: 1000;
+  text-shadow: 0px 3px 1px grey;
+  -webkit-text-stroke: 3px #184e77;
+  font-family: "Carter One";
+}
+
+#container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#pokedex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 5px;
+  padding: 10px 15px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 12px;
+          box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 12px;
+  max-width: 720px;
+}
+
+#top-btn-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 5px;
+  background: whitesmoke;
+  border-radius: 5px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+          box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+#middle-panel-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#sprite-and-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+  margin-right: 10px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#sprite-and-info img {
+  height: 100%;
+  width: 200px;
+  display: inline;
+}
+
+#sprite-and-info > div:nth-of-type(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#info span {
+  border-bottom: solid grey 2px;
+  padding: 2px;
+  margin: 2px 10px;
+}
+
+#info :last-child {
+  border-bottom: none;
+}
+
+#random-btn {
+  margin-left: 2%;
+  padding: 3px;
+}
+
+#info-and-types {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#types {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+#types span {
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+  width: 65px;
+}
+
+#description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  background-color: #eee;
+  border-radius: 4px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 3px;
+          box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 3px;
+}
+
+#description span {
+  width: 100%;
+}
+
+#search-box:focus {
+  outline: none;
+}
+
+#up-down-btn-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 10px;
+}
+
+#up-down-btn-wrapper button {
+  width: 0;
+  height: 0;
+  background: transparent;
+  margin: 5px 0px;
+  border-style: solid;
+}
+
+#up-btn {
+  border-color: transparent transparent silver transparent;
+  border-width: 0px 20px 20px 20px;
+}
+
+#down-btn {
+  border-color: silver transparent transparent;
+  border-width: 20px 20px 0px 20px;
+}
+
+#up-down-btn-wrapper button:hover {
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+}
+
+#middle-panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: solid silver 1px;
+  margin: 10px 0 10px 0;
+  padding: 0 0 10px 10px;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+          box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+/*# sourceMappingURL=pokedex.css.map */
